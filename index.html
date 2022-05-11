@@ -7,6 +7,43 @@
     <title>Shelfly</title>
 </head>
 <body>
-    
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="./icons/shelfly-logo.svg" alt="" id="logo">
+        </div>
+        <div class="search-container">
+            <form action="" id="search-form">
+                <input type="text" placeholder="Search..." name="search">
+                <select name="order" id="order">
+                    <option value="asc-alpha">A to Z</option>
+                    <option value="des-alpha">Z to A</option>
+                    <option value="asc-pgs">Lower Page Count</option>
+                    <option value="des-pgs">Higher Page Count</option>
+                    <option value="asc-read">Lower Page Read</option>
+                    <option value="des-read">Higher Page Read</option>
+                </select>
+                <select name="filter" id="filter">
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                </select>
+                <input type="checkbox" id="filter-read" name="filter-read">
+                <input type="checkbox" id="filter-fav" name="filter-fav">
+                <button type="submit" id="search-btn"><img src="./icons/search.svg" alt=""></button>
+            </form>
+        </div>
+        <div class="profile-container"></div>
+        <button id="add-book" onclick="newBookFunction()">+ Add Book</button>
+        <div class="profile-container">
+            <div class="profile-info">
+                <p id="user-name">Eredah</p>
+                <p id="info-perc">xx% Completed</p>
+                <p id="info-pgs">xxx Pages Read</p>
+            </div>
+            <div class="profile-pic">
+                <img src="./img/profile-pic.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="shelf-container" id="shelf"></div>
 </body>
 </html>
