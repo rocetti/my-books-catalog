@@ -9,8 +9,24 @@
 </head>
 <body>
     <div class="header-container">
-        <div class="logo-container">
-            <img src="./icons/shelfly-logo.svg" alt="" id="logo">
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="./icons/shelfly-logo.svg" alt="" id="logo">
+            </div>
+            
+            <div class="add-book-container">
+                <button id="add-book" onclick="newBookFunction()">+ Add Book</button>
+            </div>
+            <div class="profile-container">
+                <div class="profile-info">
+                    <p id="user-name">Eredah</p>
+                    <p id="info-perc">99% Completed</p>
+                    <p id="info-pgs">9999 Pages Read</p>
+                </div>
+                <div class="profile-pic">
+                    <img src="./img/profile-pic.jpg" alt="">
+                </div>
+            </div>
         </div>
         <div class="search-container">
             <form action="" id="search-form">
@@ -27,23 +43,12 @@
                     <option value="action">Action</option>
                     <option value="adventure">Adventure</option>
                 </select>
-                <input type="checkbox" id="filter-read" name="filter-read">
-                <input type="checkbox" id="filter-fav" name="filter-fav">
+                <input type="checkbox" class="check-box" id="filter-read" name="filter-read">
+                <label for="filter-read"><img src="./icons/read.svg" alt=""></label>
+                <input type="checkbox" class="check-box" id="filter-fav" name="filter-fav">
+                <label for="filter-fav"><img src="./icons/fav.svg" alt=""></label>
                 <button type="submit" id="search-btn"><img src="./icons/search.svg" alt=""></button>
             </form>
-        </div>
-        <div class="add-book-container">
-            <button id="add-book" onclick="newBookFunction()">+ Add Book</button>
-        </div>
-        <div class="profile-container">
-            <div class="profile-info">
-                <p id="user-name">Eredah</p>
-                <p id="info-perc">xx% Completed</p>
-                <p id="info-pgs">xxx Pages Read</p>
-            </div>
-            <div class="profile-pic">
-                <img src="./img/profile-pic.jpg" alt="">
-            </div>
         </div>
     </div>
     <div class="shelf-container" id="shelf"></div>

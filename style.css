@@ -30,11 +30,15 @@ body {
 /*HEADER*/
 .header-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
     background-color: var(--bright-color);
     width: 100vw;
+}
+.header-top {
+    display: flex;
+    width: 100%;
 }
 /*LOGO*/
 .logo-container{
@@ -45,21 +49,13 @@ body {
 #logo {
     width: clamp(100px, 150px, 100%);
 }
-/*SEARCH*/
-.search-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: auto;
-    width: 100%;
-}
 /*ADD BOOK*/
 .add-book-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1rem;
-    margin-right: auto;
+    margin-left: auto;
+    margin-right: 1rem;
 }
 #add-book {
     padding: 0.5rem;
@@ -81,6 +77,8 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin: 1rem;
+    margin-bottom: 0px;
+    min-width: 250px;
 }
 .profile-info p {
     text-align: end;
@@ -95,7 +93,45 @@ body {
     margin-left: 1rem;
 }
 .profile-pic img {
-    width: clamp(4rem, 6rem, 10rem);
+    width: clamp(3rem, 5rem, 10rem);
     border-radius: 50%;
+}
+/*SEARCH*/
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+#search-form input, 
+#search-form select {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+#search-form input[type=text] {
+    width: 100%;
+}
+.check-box {
+    display: none;
+}
+.check-box + label img {
+    width: 1.5rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+#search-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--mid-color);
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 /*SHELF*/
