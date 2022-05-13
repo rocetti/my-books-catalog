@@ -9,10 +9,21 @@
     font-family: 'Roboto', sans-serif;
 }
 *{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-size: 1rem;
     color: var(--dark-color);
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    color: var(--dark-color);
+    background-color: transparent;
 }
 
 input,
@@ -25,7 +36,11 @@ select {
 
 /*BODY*/
 body {
-    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
 }
 /*HEADER*/
 .header-container {
@@ -125,6 +140,10 @@ body {
     width: 1.5rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    
+}
+.check-box:checked + label img {
+    filter: invert(48%) sepia(65%) saturate(390%) hue-rotate(143deg) brightness(85%) contrast(87%);
 }
 #search-btn {
     border: none;
@@ -135,3 +154,63 @@ body {
     padding-right: 0.5rem;
 }
 /*SHELF*/
+.shelf-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(250px, 1fr);
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bright-color);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 1rem;
+}
+.book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.book-title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.book-author {
+    font-size: 1.2rem;
+}
+.book-genre,
+.book-pages,
+.book-completed {
+    font-size: 0.9rem;
+}
+.book-pages {
+    margin-top: auto;
+    align-self: flex-end;
+    margin-right: 0.7rem;
+}
+.book-completed {
+    align-self: flex-end;
+    margin-right: 0.7rem;
+}
+.book-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.book-menu button img{
+    width: 1.5rem;
+}
